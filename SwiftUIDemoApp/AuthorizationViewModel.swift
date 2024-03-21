@@ -14,6 +14,9 @@ final class AuthorizationViewModel: ObservableObject {
 
     @Published var currentSegentIndex = 1
 
+    @Published var emailInput: String = ""
+    @Published var emailState = DATextField.InputState.regular(message: "aa@aa.aa")
+
     init() {
         bind()
     }
@@ -22,6 +25,13 @@ final class AuthorizationViewModel: ObservableObject {
         $currentSegentIndex
             .sink { value in
                 print("Action \(value)")
+            }
+            .store(in: &cancellables)
+
+        $emailInput
+            .sink { value in
+                print(value)
+
             }
             .store(in: &cancellables)
     }

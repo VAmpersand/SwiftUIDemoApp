@@ -21,12 +21,15 @@ struct DASegmentControl: View {
         HStack(alignment: .bottom) {
             ForEach(segments.indices, id: \.self) { index in
                 Button(action: {
-                    currentIndex = index
+                    withAnimation(.easeInOut(duration: 0.15)) {
+                        currentIndex = index
+                    }
                 }, label: {
                     Text(segments[index])
                         .font(currentIndex == index ? DAFont.title01 : DAFont.title03)
-                        .foregroundStyle(DAColor.contentSecondary)
+                        .foregroundStyle(currentIndex == index ? DAColor.contentPrimary : DAColor.buttonTertiary)
                 })
+                .disabled(currentIndex == index)
 
                 if index != segments.indices.last {
                     Text("/")
@@ -35,5 +38,6 @@ struct DASegmentControl: View {
                 }
             }
         }
+        .animation(.easeInOut(duration: 0.15), value: currentIndex)
     }
 }

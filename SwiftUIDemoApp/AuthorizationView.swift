@@ -11,6 +11,13 @@ extension AuthorizationView {
     enum State: Int, CaseIterable {
         case logIn
         case signUp
+
+        var title: String {
+            switch self {
+            case .logIn: return "Log In"
+            case .signUp: return "Sign Up"
+            }
+        }
     }
 }
 
@@ -27,8 +34,8 @@ struct AuthorizationView: View {
             DAColor.backgroundGradient
                 .ignoresSafeArea()
 
-            VStack {
-                DASegmentControl(segments: ["Log In", "Sign Up"],
+            VStack(alignment: .leading) {
+                DASegmentControl(segments: AuthorizationView.State.allCases.map(\.title),
                                  currentIndex: $viewModel.currentSegentIndex)
 
                 Spacer()
@@ -42,8 +49,14 @@ struct AuthorizationView: View {
                         }
                     }
                 }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .frame(height: 300)
+
+                DATextField(title: "Email",
+                            text: $viewModel.emailInput,
+                            state: $viewModel.emailState)
             }
+            .padding(.horizontal, 45)
         }
     }
 }

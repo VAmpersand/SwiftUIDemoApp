@@ -15,6 +15,7 @@
 		778D6B282BA91FF4007A6CFD /* DASegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D6B272BA91FF4007A6CFD /* DASegmentControl.swift */; };
 		778D6B2A2BA9208C007A6CFD /* DAFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D6B292BA9208C007A6CFD /* DAFont.swift */; };
 		778D6B2C2BA92444007A6CFD /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D6B2B2BA92444007A6CFD /* AuthorizationViewModel.swift */; };
+		778D6B2E2BAA6FDA007A6CFD /* DATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D6B2D2BAA6FDA007A6CFD /* DATextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		778D6B272BA91FF4007A6CFD /* DASegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DASegmentControl.swift; sourceTree = "<group>"; };
 		778D6B292BA9208C007A6CFD /* DAFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAFont.swift; sourceTree = "<group>"; };
 		778D6B2B2BA92444007A6CFD /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		778D6B2D2BAA6FDA007A6CFD /* DATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				778D6B272BA91FF4007A6CFD /* DASegmentControl.swift */,
+				778D6B2D2BAA6FDA007A6CFD /* DATextField.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778D6B2E2BAA6FDA007A6CFD /* DATextField.swift in Sources */,
 				778D6B2C2BA92444007A6CFD /* AuthorizationViewModel.swift in Sources */,
 				778D6B2A2BA9208C007A6CFD /* DAFont.swift in Sources */,
 				778D6B252BA91D60007A6CFD /* DAColor.swift in Sources */,
